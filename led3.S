@@ -8,8 +8,13 @@
  #define GPJ0_DAT 0xE0200244
  #define GPD0_CON 0xE02000A0
  #define GPD0_DAT 0xE02000A4
- #define WT_CON 0xE2700000
  
+ #define rGPJ0_CON *((volatile unsigned int *)GPJ0_CON)
+ #define rGPJ0_DAT *((volatile unsigned int *)GPJ0_DAT)
+ #define rGPD0_CON *((volatile unsigned int *)GPD0_CON)
+ #define rGPD0_DAT *((volatile unsigned int *)GPD0_DAT)
+  
+  
  .global _start
 _start:
 
